@@ -19,7 +19,7 @@ This adds pdftohtml to your path.
 Website of PDFTOHTML: http://pdftohtml.sourceforge.net
 
 ### PDFtk
-You also need to install PDFtk to format the PDF file properly so that it can be converted to structured XML format.
+You also need to install PDFtk Server to format the PDF file properly so that it can be converted to structured XML format.
 
 It can be sintalled from the following web link: 
 
