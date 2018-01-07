@@ -12,7 +12,7 @@ You need to install pdftohtml on the system.
 
 It can be installed with the following command:
 
->> brew install pdftohtml 
+    >> brew install pdftohtml 
 
 This adds pdftohtml to your path.
 
