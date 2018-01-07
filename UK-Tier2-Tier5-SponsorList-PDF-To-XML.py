@@ -12,11 +12,14 @@ def download_pdf_file(url):
     f = open(r'original.pdf', 'wb')
     f.write(pdfdata)
 
+    
+''' Repair a PDF’s corrupted XREF table and stream lengths, if possible '''
 def fix_pdf_file_format():
     cmd = 'pdftk original.pdf output fixedFormat.pdf'
     cmd += " >/dev/null 2>&1"
     os.system(cmd)
 
+    
 def pdftoxml(pdfdata):
     import tempfile
 
@@ -37,11 +40,12 @@ def pdftoxml(pdfdata):
     xmlin.close()
     return xmldata
 
+
 def main(url):
     download_pdf_file(url)
     print(">>PDF from url downloaded")
     fix_pdf_file_format()
-    print(">>Fixed the PDF format before converting to XML")
+    print(">>Fixed the XREF table of PDF (if corrupted) before converting to XML")
 
     pdfdata = open(r'fixedFormat.pdf', 'rb').read()
     print(">>pdfdata read")
